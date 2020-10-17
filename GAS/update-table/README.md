@@ -40,6 +40,8 @@ https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6
 
 ▼コード
 ```
+// update-table.gs
+
 // 更新対象のスプレッドシートのURLとシート名
 const SS_URL = ""
 const SHEET_NAME = ""
