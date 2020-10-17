@@ -52,7 +52,7 @@ function updateTabele（pu_data）{
 }
 
 function test(){
-  let up_data = {"name": "Yukimura Aoi", "Age": 15};
+  let up_data = {"ID": 1, "ステータス": "対応中"};
   // 対象のスプレッドシートを更新する
   updateTabele（up_data）
 }
