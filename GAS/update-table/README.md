@@ -44,8 +44,8 @@ https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6
 // update-table.gs
 
 // 更新対象のスプレッドシートのURLとシート名
-const SS_URL = ""
-const SHEET_NAME = ""
+const SS_URL = "https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing"
+const SHEET_NAME = "テーブル"
 
 function updateTabele（pu_data）{
   //課題をコーディングする
@@ -53,7 +53,7 @@ function updateTabele（pu_data）{
 
 function test(){
   let up_data = {"ID": 1, "ステータス": "対応中"};
-  // 対象のスプレッドシートを更新する
   updateTabele（up_data）
+  //シート「テーブル」のセルB2が”対応中”に更新される
 }
 ```
