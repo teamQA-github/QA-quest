@@ -13,7 +13,7 @@ GASの基本中の基本である、スプレッドシートの表に対する�
 `{key:value}`のように`key`と`value`がペアで定義される変数の型の一つです。  
 配列のように`,`で区切ることで複数の要素を定義することが出来ます。
 
-▼【JavaScript入門】連想配列(Dictionary)の取得/追加/ソートまとめ
+▼【JavaScript入門】連想配列(Dictionary)の取得/追加/ソートまとめ  
 https://www.sejuku.net/blog/27965
 
 # 要件定義
