@@ -50,8 +50,7 @@ https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6
 ```
 // update-table.gs
 
-// 更新対象のスプレッドシートのURLとシート名
-const SS_URL = "https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing"
+// 更新対象のスプレッドシートのシート名
 const SHEET_NAME = "テーブル"
 
 function updateTabele（pu_data）{
