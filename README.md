@@ -32,7 +32,7 @@ https://datawokagaku.com/github_register/
 `git remote add upstream https://github.com/teamQA-github/QA-quest.git`  
 `git remote -v`を実行してupstreamが表示されることを確認できればOK
 
-## 課題に対するプルリク手順
+## プルリクでのレビュー依頼手順
 1. masterブランチにて、upstreamのリポジトリからfetch,mergeを行う  
 ※環境立ち上げ直後の場合は不要
 1. 課題対応用のbranchをmasterから作成する
