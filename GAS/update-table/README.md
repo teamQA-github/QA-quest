@@ -44,7 +44,7 @@ https://www.sejuku.net/blog/27965
 例）  
 ▼スプレッドシート  
 https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing  
-★上記のスプレッドシートは更新せずに、ご自身のGsuiteに複製をしてください！
+※上記のスプレッドシートは更新せずに、ご自身のGsuiteに複製をしてください！
 
 ▼コード
 ```
