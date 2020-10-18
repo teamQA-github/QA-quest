@@ -57,13 +57,13 @@ https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6
 // 更新対象のスプレッドシートのシート名
 const SHEET_NAME = "テーブル"
 
-function updateTabele（pu_data）{
+function updateTabele(pu_data){
   //課題をコーディングする
 }
 
 function test(){
   let up_data = {"ID": 1, "ステータス": "対応中"};
-  updateTabele（up_data）
+  updateTabele(up_data)
   //シート「テーブル」のセルB2が”対応中”に更新される
 }
 ```
