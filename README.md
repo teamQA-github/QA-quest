@@ -21,7 +21,7 @@
 基本的にはSlackまたは、もくもく会でフォローします！
 gitを使用できない方は、gitの対応は不要です！！ Gitに興味がある方は下記のサイトがおすすめです〜
 
-▼Git超入門講座
+▼Git超入門講座  
 https://datawokagaku.com/github_register/
 
 ## gitでの環境立ち上げ手順
@@ -33,13 +33,13 @@ https://datawokagaku.com/github_register/
 `git remote -v`を実行してupstreamが表示されることを確認できればOK
 
 ## プルリクでのレビュー依頼手順
-1. masterブランチにて、upstreamのリポジトリからfetch,mergeを行う  
+1. mainブランチにて、upstreamのリポジトリからfetch,mergeを行う  
 ※環境立ち上げ直後の場合は不要
-1. 課題対応用のbranchをmasterから作成する
+1. 課題対応用のbranchをmainから作成する
 1. 課題のREADME.mkに従ってコーディングを行う
 1. git add & commit & pushする
 1. 自身のGitHubのQA-quest画面からプルリクエストを作成する
-    1. プルリクエストのrequest先を本家(teamQA-github)のmasterに指定する  
+    1. プルリクエストのrequest先を本家(teamQA-github)のmainに指定する  
     ※request元はもちろん課題用に作成したbranchであること
     1. プルリクエストのタイトル(Pull Request名)は必ず課題名(フォルダ名)で依頼してください。
     1. プルリクエストのコメント蘭に`@teamQA-github/mentor`にメンションをお願いします。
