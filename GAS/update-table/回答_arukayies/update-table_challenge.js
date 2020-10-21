@@ -13,7 +13,7 @@ function updateTabele_challenge(pu_data) {
     // シートの中身を2次元配列に入れる
     const spreadsheet = SpreadsheetApp.getActive();
     const sheet = spreadsheet.getSheetByName(SHEET_NAME);
-    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
+    let values = sheet.getDataRange().getValues();
     
     // 引数のオブジェクトにIDが存在しない場合は新規行としてIDを振る
     if (!pu_data["ID"]) {

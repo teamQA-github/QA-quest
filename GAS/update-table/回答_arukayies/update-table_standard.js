@@ -19,7 +19,7 @@ function updateTabele_standard(pu_data) {
     // シートの中身を2次元配列に入れる
     const spreadsheet = SpreadsheetApp.getActive();
     const sheet = spreadsheet.getSheetByName(SHEET_NAME);
-    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
+    let values = sheet.getDataRange().getValues();
 
     // 1行目をキーとしてコピーする
     let keys = values[0];
