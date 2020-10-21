@@ -1,5 +1,9 @@
 // 更新対象のスプレッドシート情報
+const SS = SpreadsheetApp.getActive();
 const SHEET_NAME = "テーブル"
+
+// テスト用のスプレッドシート情報
+const SHEET_NAME_TEST１ = "test_standard"
 
 /*
 概要
@@ -19,17 +23,40 @@ const assert = GASUnit.assert
 function test_standard() {
     exports({
         "update-table-test": {
-            "正常系": {
-                "ID:1がステータス:対応完了に更新されていること": function () {
-                    let up_data = { "ID": 1, "ステータス": "対応完了" };
+            "{ID:1, ステータス:対応完了}で更新": {
+                "ID1のステータスが対応完了に更新されていること": function () {
+                    const up_data = { "ID": 1, "ステータス": "対応完了" };
                     updateTabele_standard(up_data);
-                    let spreadsheet = SpreadsheetApp.getActive();
-                    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
-                    let keys = values[0];
-                    let arrayObj = arrayToObj(keys, values);
-                    for (let i in arrayObj) {
-                        if (arrayObj[i]["ID"] === 1) assert(arrayObj[i]["ステータス"] === "対応完了");
-                    }
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("B2").getValue() === "対応完了");
+                }
+            },
+            "{ID:2, ステータス:クローズ, 優先度:3}で更新": {
+                "ID2のステータスがクローズに更新されていること": function () {
+                    const up_data = { "ID": 2, "ステータス": "クローズ", "優先度": "3" };
+                    updateTabele_standard(up_data);
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("B3").getValue() === "クローズ");
+                },
+                "ID2の優先度が3に更新されていること": function () {
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("D3").getValue() === 3);
+                }
+            },
+            "{ID:3, ステータス:再オープン, 不具合概要:アプリクラッシュ, 優先度:0}で更新": {
+                "ID3のステータスが再オープンに更新されていること": function () {
+                    const up_data = { "ID": 3, "ステータス": "再オープン", "不具合概要": "アプリクラッシュ", "優先度": "０" };
+                    updateTabele_standard(up_data);
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("B4").getValue() === "再オープン");
+                },
+                "ID3の不具合概要がアプリクラッシュに更新されていること": function () {
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("C4").getValue() === "アプリクラッシュ");
+                },
+                "ID3の優先度が0に更新されていること": function () {
+                    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+                    assert(sheet.getRange("D4").getValue() === 0);
                 }
             }
         }
@@ -37,43 +64,4 @@ function test_standard() {
 }
 
 function test_challenge() {
-    exports({
-        "update-table-test": {
-            "正常系": {
-                "ID:1がステータス:対応完了に更新されていること": function () {
-                    let up_data = { "ID": 1, "ステータス": "対応完了" };
-                    updateTabele_challenge(up_data);
-                    let spreadsheet = SpreadsheetApp.getActive();
-                    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
-                    let keys = values[0];
-                    let arrayObj = arrayToObj(keys, values);
-                    for (let i in arrayObj) {
-                        if (arrayObj[i]["ID"] === 1) assert(arrayObj[i]["ステータス"] === "対応完了");
-                    }
-                },
-                "valueに改行が含まれていても更新されていること": function () {
-                    let up_data = { "ID": 2, "不具合概要": "環境\n本番環境で不具合です。" };
-                    updateTabele_challenge(up_data);
-                    let spreadsheet = SpreadsheetApp.getActive();
-                    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
-                    let keys = values[0];
-                    let arrayObj = arrayToObj(keys, values);
-                    for (let i in arrayObj) {
-                        if (arrayObj[i]["ID"] === 2) assert(arrayObj[i]["不具合概要"] === "環境\n本番環境で不具合です。");
-                    }
-                },
-                "IDが存在しない場合は新規行として追加されていること": function () {
-                    let up_data = { "不具合概要": "新規不具合" };
-                    updateTabele_challenge(up_data);
-                    let spreadsheet = SpreadsheetApp.getActive();
-                    let values = spreadsheet.getSheetByName(SHEET_NAME).getDataRange().getValues();
-                    let keys = values[0];
-                    let arrayObj = arrayToObj(keys, values);
-                    for (let i in arrayObj) {
-                        if (arrayObj[i]["不具合概要"] === "新規不具合") assert(arrayObj[i]["不具合概要"] === "新規不具合");
-                    }
-                }
-            }
-        }
-    })
 }

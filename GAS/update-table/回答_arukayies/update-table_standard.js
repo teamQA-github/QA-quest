@@ -10,41 +10,25 @@
  なし
 ———————————–*/
 function updateTabele_standard(pu_data) {
-    // 引数のオブジェクトにIDが存在しない場合は処理を中止
-    if (!pu_data["ID"]) {
-        console.log(`引数のオブジェクトにIDが存在しません`);
-        return false;
-    }
-
     // シートの中身を2次元配列に入れる
-    const spreadsheet = SpreadsheetApp.getActive();
-    const sheet = spreadsheet.getSheetByName(SHEET_NAME);
-    let values = sheet.getDataRange().getValues();
+    const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
+    let tables = sheet.getDataRange().getValues();
 
     // 1行目をキーとしてコピーし、配列からは１行目は削除する
-    let keys = values.shift();
+    let keys = tables.shift();
 
-    // 2次元配列を連想配列にする
-    let arrayObj = arrayToObj(keys, values);
-
-    // IDが存在するかのフラグ
-    let flag = true;
-    for (let i in arrayObj) {
-        // IDが存在する場合は、値を更新する
-        if (arrayObj[i].ID === pu_data["ID"]) {
-            flag = false;
-            // キーが存在する場合は、値を更新する
-            for (let key in keys) {
-                if ([keys[key]] in pu_data) {
-                    arrayObj[i][keys[key]] = pu_data[keys[key]];
-                }
+    // 渡されたkeyとタイトル行が一致するまで
+    for (let col in keys) {
+        if (keys[col] in pu_data) {
+          // IDが一致したら、valueで更新する
+          for (let row in tables) {
+            if (pu_data["ID"] === tables[row][0]) {
+              tables[row][col] = pu_data[keys[col]];
             }
+          }
         }
     }
-
-    // 連想配列から2次元配列に戻す
-    let result = arrayObjToArray(keys, arrayObj)
-
+    
     // 2次元配列をシートに書き込む
-    sheet.getRange(2, 1, result.length, result[0].length).setValues(result);
+    sheet.getRange(2, 1, tables.length, tables[0].length).setValues(tables);
 }
