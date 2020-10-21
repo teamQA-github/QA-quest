@@ -15,7 +15,7 @@ function updateTabele_standard(pu_data) {
     let tables = sheet.getDataRange().getValues();
 
     // 1行目をキーとしてコピーし、配列からは１行目は削除する
-    let keys = tables.shift();
+    const keys = tables.shift();
 
     // 渡されたkeyとタイトル行が一致するまで
     for (let col in keys) {
