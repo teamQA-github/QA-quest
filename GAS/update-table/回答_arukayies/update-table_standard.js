@@ -21,11 +21,8 @@ function updateTabele_standard(pu_data) {
     const sheet = spreadsheet.getSheetByName(SHEET_NAME);
     let values = sheet.getDataRange().getValues();
 
-    // 1行目をキーとしてコピーする
-    let keys = values[0];
-
-    // 1行目を削除する
-    values.splice(0, 1);
+    // 1行目をキーとしてコピーし、配列からは１行目は削除する
+    let keys = values.shift();
 
     // 2次元配列を連想配列にする
     let arrayObj = arrayToObj(keys, values);
