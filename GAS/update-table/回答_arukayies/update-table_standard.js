@@ -12,7 +12,7 @@
 function updateTabele_standard(pu_data) {
     // シートの中身を2次元配列に入れる
     const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
-    let tables = sheet.getDataRange().getValues();
+    let tables = sheet.getRange("A1:D7").getValues();
 
     // 1行目をキーとしてコピーし、配列からは１行目は削除する
     const keys = tables.shift();
