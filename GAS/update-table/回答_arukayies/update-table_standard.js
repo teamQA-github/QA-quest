@@ -22,7 +22,7 @@ function updateTabele_standard(pu_data) {
         if (keys[col] in pu_data) {
           // IDが一致したら、valueで更新する
           for (let row in tables) {
-            if (pu_data["ID"] === tables[row][0]) {
+            if (pu_data["ID"] == tables[row][0]) {
               tables[row][col] = pu_data[keys[col]];
             }
           }
