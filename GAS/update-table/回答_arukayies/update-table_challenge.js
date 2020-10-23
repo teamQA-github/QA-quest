@@ -10,34 +10,46 @@
  なし
 ———————————–*/
 function updateTabele_challenge(pu_data) {
-    // シートの中身を2次元配列に入れる
+    // シートオブジェクトを取得
     const sheet = SS.getSheetByName(SHEET_NAME_TEST2);
-    let tables = sheet.getDataRange().getValues();
+    
+    // シートの最終列を取得
+    const lastCol = sheet.getLastColumn();
+    
+    // 1行目のタイトル行を取得
+    const titles = sheet.getRange(1,2,1,lastCol).getValues();
 
+    // ID列を取得
+    let ids = sheet.getRange("A:A").getValues();
+    
     // 引数のオブジェクトにIDが存在しない場合は新規行として追加する
     let newID;
     if (!pu_data["ID"]) {
-        newID = sheet.getLastRow();
+        newID = ids.filter(String).length;
         pu_data.ID = newID;
         // 新規行の追加
-        tables.push([newID])
+        ids.push([newID])
     }
 
-    // 1行目をキーとしてコピーし、配列からは１行目は削除する
-    const keys = tables.shift();
-
-    // 渡されたkeyとタイトル行が一致するまで
-    for (let col in keys) {
-        if (keys[col] in pu_data) {
-            // IDが一致したら、valueで更新する
-            for (let row in tables) {
-                if (pu_data["ID"] == tables[row][0]) {
-                    tables[row][col] = pu_data[keys[col]];
-                }
-            }
-        }
+    // 更新対象のIDの行番号を取得
+    let targetRow;
+    for (let i in ids) {
+      if (ids[i] == pu_data["ID"]) {
+        targetRow = Number(i)+1;
+        break;
+      }
     }
 
-    // 2次元配列をシートに書き込む
-    sheet.getRange(2, 1, tables.length, tables[0].length).setValues(tables);
+    // 更新対象のID行を取得
+    let targetValues = sheet.getRange(targetRow,2,1,lastCol).getValues();
+
+    // 引数のkeyに値が存在する場合は、targetValuesを更新
+    for (let i in titles[0]) {
+      if (titles[0][i] in pu_data) {
+        targetValues[0][i] = pu_data[titles[0][i]];
+      }
+    }
+    
+    // 更新対象のID行のみ更新
+    sheet.getRange(targetRow, 2, 1 ,lastCol).setValues(targetValues);
 }

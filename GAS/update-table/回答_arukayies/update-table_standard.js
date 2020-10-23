@@ -27,6 +27,7 @@ function updateTabele_standard(pu_data) {
     for (let i in ids) {
       if (ids[i] == pu_data["ID"]) {
         targetRow = Number(i)+1;
+        break;
       }
     }
 
