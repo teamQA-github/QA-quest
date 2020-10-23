@@ -10,25 +10,36 @@
  なし
 ———————————–*/
 function updateTabele_standard(pu_data) {
-    // シートの中身を2次元配列に入れる
+    // シートオブジェクトを取得
     const sheet = SS.getSheetByName(SHEET_NAME_TEST１);
-    let tables = sheet.getRange("A1:D7").getValues();
+    
+    // シートの最終列を取得
+    const lastCol = sheet.getLastColumn();
+    
+    // 1行目のタイトル行を取得
+    const titles = sheet.getRange(1,2,1,lastCol).getValues();
 
-    // 1行目をキーとしてコピーし、配列からは１行目は削除する
-    const keys = tables.shift();
+    // ID列を取得
+    const ids = sheet.getRange("A:A").getValues();
 
-    // 渡されたkeyとタイトル行が一致するまで
-    for (let col in keys) {
-        if (keys[col] in pu_data) {
-          // IDが一致したら、valueで更新する
-          for (let row in tables) {
-            if (pu_data["ID"] == tables[row][0]) {
-              tables[row][col] = pu_data[keys[col]];
-            }
-          }
-        }
+    // 更新対象のIDの行番号を取得
+    let targetRow;
+    for (let i in ids) {
+      if (ids[i] == pu_data["ID"]) {
+        targetRow = Number(i)+1;
+      }
+    }
+
+    // 更新対象のID行を取得
+    let targetValues = sheet.getRange(targetRow,2,1,lastCol).getValues();
+
+    // 引数のkeyに値が存在する場合は、targetValuesを更新
+    for (let i in titles[0]) {
+      if (titles[0][i] in pu_data) {
+        targetValues[0][i] = pu_data[titles[0][i]];
+      }
     }
     
-    // 2次元配列をシートに書き込む
-    sheet.getRange(2, 1, tables.length, tables[0].length).setValues(tables);
+    // 更新対象のID行のみ更新
+    sheet.getRange(targetRow, 2, 1 ,lastCol).setValues(targetValues);
 }
