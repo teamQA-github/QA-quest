@@ -54,7 +54,8 @@ console.log(arr.indexOf('NG', 2));
 しかし、`flat()`と`indexOf()`を使用することでforループとif文を使用するよりも、効率的かつシンプルに実装が可能となります！  
 
 # 課題
-`flat()`と`indexOf()`を駆使して、下記のスプレッドシートに対して①〜③の課題にチャレンジして見ましょう！
+`flat()`と`indexOf()`を駆使して、下記のスプレッドシートに対して①〜③の課題にチャレンジして見ましょう！  
+１つの課題のみでもレビューを依頼してOKです〜
 
 ▼ スプレッドシート  
 https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing  
