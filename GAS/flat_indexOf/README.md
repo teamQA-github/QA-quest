@@ -57,7 +57,7 @@ console.log(arr.indexOf('NG', 2));
 `flat()`と`indexOf()`を駆使して、下記のスプレッドシートに対して①〜③の課題にチャレンジして見ましょう！
 
 ▼ スプレッドシート  
-https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing  
 シート「titanic」
 ※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
