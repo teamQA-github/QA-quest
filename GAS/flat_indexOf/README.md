@@ -53,61 +53,87 @@ console.log(arr.indexOf('NG', 2));
 操作したい表を`getValues()`で取得した2次元配列対して、forループとif文で検索処理を実装する方法が簡単に思いつく処理ではないでしょうか？
 しかし、`flat()`と`indexOf()`を使用することでforループとif文を使用するよりも、効率的かつシンプルに実装が可能となります！
 
-# 課題①
-`flat()`と`indexOf()`
+# 課題
+`flat()`と`indexOf()`を駆使して、課題にチャレンジして見ましょう！
 
 ▼ スプレッドシート  
-https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing  
+https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing
 ※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
-=========================================================================
+## ①
+表の1行目のタイトル行に対して、引数で渡された文字列と一致する列番号を返す関数を実装してみましょう！
+A列が0と返却されるように実装してください。
 
-# 要件定義
-
-スプレッドシートで作成された表に対して、連想配列で任意の行に更新を行う機能を作成する。  
-更新対象行は連想配列の`key`に"ID"を指定することで`value`と一致する行を対象として指定し、  
-"ID"以外の`key`で指定した値とタイトル行と一致した列を`value`の値で更新される。  
-
-# 詳細仕様
-
-1. 更新対象(表)の 1 行目はタイトル行で固定
-1. 更新対象(表)のタイトルに重複と空白は存在しない（ただし末尾に空白列は存在し得る）
-1. 更新対象(表)の１列目は ID 列で固定
-1. 更新対象(表)の ID 列は数値の昇順でソートされている、かつ重複は存在しない
-1. 更新対象(表)の途中に空白行は存在しない（ただし末尾に空白行は存在し得る）
-1. 連想配列（引数）の`ID`の`value`には必ず表の ID 列に存在する数値が設定されるものとする
-1. 連想配列（引数）の`ID`の`value`と更新対象のテーブルの ID 列で一致する行が更新対象
-1. 連想配列（引数）の`key`と更新対象のテーブルのタイトル行が一致した列に`value`で更新する
-1. 連想配列（引数）の`key`や`value`が空白（""）の場合はスキップする  
-   ※基本的な更新対象(表)や連想配列（引数）は本文書下部の例を参照
-
-# チャレンジ仕様
-
-「要件定義」と「詳細仕様」の実装が対応できて余裕がある場合は、下記の仕様をコードに組み込んでみよう！  
-
-1. 連想配列（引数）の`value`に改行（複数行）が含まれる場合も考慮する（`ID`は除く）
-1. `key`に"ID"がインプットされなかった場合は、表の末尾に新規行として追加する（`key`のインプットがないタイトル列は空白）
-
-例）  
-▼ スプレッドシート  
-https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing  
-※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
-
-▼ コード
-
+例）
 ```
-// update-table.gs
+// flat_indexOf.gs
 
 // 更新対象のスプレッドシートのシート名
 const SHEET_NAME = "テーブル"
 
-function updateTabele(pu_data){
+function getTitleCol(title){
   //課題をコーディングする
 }
 
 function test(){
-  let up_data = {"ID": 1, "ステータス": "対応中"};
-  updateTabele(up_data)
-  //シート「テーブル」のセルB2が”対応中”に更新される
+
+  getTitleCol("PassengerId")
+  // 0
+  getTitleCol("Age")
+  // 5
+  getTitleCol("notitle")
+  // -1
+}
+```
+## ②
+表の1列目のPassengerId列に対して、引数で渡された数値と一致する行番号を返す関数を実装してみましょう！
+A列が0と返却されるように実装してください。
+
+### ヒント
+`getValues()`は1列分を取得したとしても多次元配列で取得されてしまいます。  
+多次元配列では`indexOf()`が使用できないので、どうすれば良いか考えて見ましょう！
+
+例）
+```
+// flat_indexOf.gs
+
+function getPassengerIdRow(num){
+  //課題をコーディングする
+}
+
+function test(){
+
+  getPassengerIdRow(1)
+  // 1
+  getPassengerIdRow(5)
+  // 5
+  getPassengerIdRow(0)
+  // -1
+}
+```
+
+## ③
+
+
+### ヒント
+`getValues()`は1列分を取得したとしても多次元配列で取得されてしまいます。  
+多次元配列では`indexOf()`が使用できないので、どうすれば良いか考えて見ましょう！
+
+例）
+```
+// flat_indexOf.gs
+
+function getPassengerIdRow(num){
+  //課題をコーディングする
+}
+
+function test(){
+
+  getPassengerIdRow(1)
+  // 1
+  getPassengerIdRow(5)
+  // 5
+  getPassengerIdRow(0)
+  // -1
 }
 ```
