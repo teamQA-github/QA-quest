@@ -3,12 +3,52 @@
 # summary
 
 GASでスプレッドシートを操作する上で、とても便利な`flat()`と`indexOf()`をご紹介します。  
-みなさんもスプレッドシートの表をGASで操作する場合に、ID列などの連番
 
-> flatはV8 のバージョンで追加されたため、古いバージョンではエラーになります。
+> flatはV8のバージョンで追加されたため、古いバージョンではエラーになります。
 
 ### flat()
+多次元配列を指定した次元数に再結合し、新しい配列を生成する関数です。
+>詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)を参照
 
+```
+//2次元の配列（getValuesで取得される形式）
+const arr1 = [[0, 1], [2, 3], [4, 5]]
+
+console.log(arr1.flat())
+// [0, 1, 2, 3, 4, 5]
+
+//多次元の配列(3次元)
+const arr2 = [0, 1, [2, 3, [4, 5]]]
+
+console.log(arr2.flat());
+// [0, 1, 2, 3, [4, 5]]
+
+console.log(arr2.flat(2));
+// [0, 1, 2, 3, 4, 5]
+```
+
+### indexOf()
+第一引数の値で配列を検索し一致する要素の最初のインデックスを返します。存在しない場合は -1 を返します。
+また、第二引数で検索を開始する要素の位置を指定することができます。
+>詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)を参照
+
+```
+const arr = ['OK', 'NG', 'OK', 'OK', 'NG'];
+
+console.log(arr.indexOf('NG'));
+// 1
+
+console.log(arr.indexOf('YES'));
+// -1
+
+console.log(arr.indexOf('NG', 2));
+// 4
+```
+
+>indexOf()はString(文字列)でも使用できるので、興味がある方は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)を参照
+
+# なぜflat（）とindexOf()が便利なのか？
+みなさんもスプレッドシートの表をGASで操作する場合に、特定の列や行に対して検索を行う場合があると思います。
 
 
 =========================================================================
