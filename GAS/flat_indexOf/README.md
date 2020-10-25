@@ -54,14 +54,15 @@ console.log(arr.indexOf('NG', 2));
 しかし、`flat()`と`indexOf()`を使用することでforループとif文を使用するよりも、効率的かつシンプルに実装が可能となります！
 
 # 課題
-`flat()`と`indexOf()`を駆使して、課題にチャレンジして見ましょう！
+`flat()`と`indexOf()`を駆使して、下記のスプレッドシートに対して①〜③の課題にチャレンジして見ましょう！
 
 ▼ スプレッドシート  
 https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing
+シート「titanic」
 ※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
 ## ①
-表の1行目のタイトル行に対して、引数で渡された文字列と一致する列番号を返す関数を実装してみましょう！
+表1行目のタイトル行に対して、引数で渡された文字列と一致する列番号を返す関数を実装してみましょう！
 A列が0と返却されるように実装してください。
 
 例）
@@ -69,7 +70,7 @@ A列が0と返却されるように実装してください。
 // flat_indexOf.gs
 
 // 更新対象のスプレッドシートのシート名
-const SHEET_NAME = "テーブル"
+const SHEET_NAME = "titanic"
 
 function getTitleCol(title){
   //課題をコーディングする
@@ -86,12 +87,12 @@ function test(){
 }
 ```
 ## ②
-表の1列目のPassengerId列に対して、引数で渡された数値と一致する行番号を返す関数を実装してみましょう！
+表1列目のPassengerId列に対して、引数で渡された数値と一致する行番号を返す関数を実装してみましょう！
 A列が0と返却されるように実装してください。
 
 ### ヒント
 `getValues()`は1列分を取得したとしても多次元配列で取得されてしまいます。  
-多次元配列では`indexOf()`が使用できないので、どうすれば良いか考えて見ましょう！
+多次元配列では`indexOf()`が使用できないのでどうすれば良いか考えて見ましょう！
 
 例）
 ```
@@ -113,11 +114,10 @@ function test(){
 ```
 
 ## ③
-
+第一引数で渡された数値と一致するPassengerIdの行に対して、第二引数で渡されたタイトルの値を返却する関数を実装して見ましょう！
 
 ### ヒント
-`getValues()`は1列分を取得したとしても多次元配列で取得されてしまいます。  
-多次元配列では`indexOf()`が使用できないので、どうすれば良いか考えて見ましょう！
+タイトル行とPassengerIdが一致した行は離れていても、検索したタイトル行の列と返却する値の列は同じです。
 
 例）
 ```
@@ -129,11 +129,14 @@ function getPassengerIdRow(num){
 
 function test(){
 
-  getPassengerIdRow(1)
+  getPassengerIdRow(1、"PassengerId")
   // 1
-  getPassengerIdRow(5)
-  // 5
-  getPassengerIdRow(0)
-  // -1
+  getPassengerIdRow(5, "Age")
+  // 35
+  getPassengerIdRow(890, "Cabin")
+  // C148
 }
 ```
+
+# 蛇足
+課題で利用しているデータはkaggleのチュートリアルで有名なタイタニックデータを利用しています。
