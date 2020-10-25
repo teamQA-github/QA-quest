@@ -11,7 +11,7 @@ GASでスプレッドシートを操作する上で、とても便利な`flat()`
 >詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)を参照
 
 ```
-//2次元の配列（getValuesで取得される形式）
+//2次元の配列(getValuesで取得される形式)
 const arr1 = [[0, 1], [2, 3], [4, 5]]
 
 console.log(arr1.flat())
@@ -48,7 +48,7 @@ console.log(arr.indexOf('NG', 2));
 
 >indexOf()はString(文字列)でも使用できるので、興味がある方は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)を参照
 
-# なぜflat（）とindexOf()が便利なのか？
+# なぜflat()とindexOf()が便利なのか？
 みなさんもスプレッドシートの表をGASで操作する場合に、特定の列や行に対して検索を行う場合があると思います。  
 操作したい表を`getValues()`で取得した2次元配列対して、forループとif文で検索処理を実装する方法が簡単に思いつく処理ではないでしょうか？  
 しかし、`flat()`と`indexOf()`を使用することでforループとif文を使用するよりも、効率的かつシンプルに実装が可能となります！  
@@ -65,7 +65,7 @@ https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7
 表1行目のタイトル行に対して、引数で渡された文字列と一致する列番号を返す関数を実装してみましょう！  
 A列が0と返却されるように実装してください。
 
-例）
+例)
 ```
 // flat_indexOf.gs
 
@@ -94,7 +94,7 @@ A列が0と返却されるように実装してください。
 `getValues()`は1列分を取得したとしても多次元配列で取得されてしまいます。  
 多次元配列では`indexOf()`が使用できないのでどうすれば良いか考えて見ましょう！
 
-例）
+例)
 ```
 // flat_indexOf.gs
 
@@ -119,7 +119,7 @@ function test(){
 ### ヒント
 タイトル行とPassengerIdが一致した行は離れていても、検索したタイトル行の列と返却する値の列は同じです。
 
-例）
+例)
 ```
 // flat_indexOf.gs
 
