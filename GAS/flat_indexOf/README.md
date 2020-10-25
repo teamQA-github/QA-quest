@@ -28,8 +28,9 @@ console.log(arr2.flat(2));
 ```
 
 ### indexOf()
-第一引数の値で配列を検索し一致する要素の最初のインデックスを返します。存在しない場合は -1 を返します。
+第一引数の値で配列を検索し一致する要素で最初のインデックスを返します。存在しない場合は -1 を返します。
 また、第二引数で検索を開始する要素の位置を指定することができます。
+注意点としてindexOf()は多次元配列には使用ができず、必ず -1 が返されてしまいます。
 >詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)を参照
 
 ```
@@ -49,7 +50,15 @@ console.log(arr.indexOf('NG', 2));
 
 # なぜflat（）とindexOf()が便利なのか？
 みなさんもスプレッドシートの表をGASで操作する場合に、特定の列や行に対して検索を行う場合があると思います。
+操作したい表を`getValues()`で取得した2次元配列対して、forループとif文で検索処理を実装する方法が簡単に思いつく処理ではないでしょうか？
+しかし、`flat()`と`indexOf()`を使用することでforループとif文を使用するよりも、効率的かつシンプルに実装が可能となります！
 
+# 課題①
+`flat()`と`indexOf()`
+
+▼ スプレッドシート  
+https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6D5E/edit?usp=sharing  
+※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
 =========================================================================
 
