@@ -67,3 +67,14 @@ function test(){
   //シート「テーブル」のセルB2が”対応中”に更新される
 }
 ```
+
+### ヒント
+```
+let up_data = {"ID": 1, "ステータス": "対応中"};
+for(let key in up_data){
+  Logger.log(`key:${key}、value:${up_data[key]}`)
+}
+```
+出力される表示結果
+>key:ID、value:1
+>key:ステータス、value:対応中
