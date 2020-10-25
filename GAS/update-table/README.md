@@ -76,5 +76,5 @@ for(let key in up_data){
 }
 ```
 出力される表示結果
->key:ID、value:1
+>key:ID、value:1  
 >key:ステータス、value:対応中
