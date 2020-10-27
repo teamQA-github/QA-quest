@@ -124,17 +124,17 @@ function test(){
 ```
 // flat_indexOf.gs
 
-function getPassengerIdRow(num){
+function getPassengerIdValue(num){
   //課題をコーディングする
 }
 
 function test(){
 
-  getPassengerIdRow(1、"PassengerId")
+  getPassengerIdValue(1、"PassengerId")
   // 1
-  getPassengerIdRow(5, "Age")
+  getPassengerIdValue(5, "Age")
   // 35
-  getPassengerIdRow(890, "Cabin")
+  getPassengerIdValue(890, "Cabin")
   // C148
 }
 ```
