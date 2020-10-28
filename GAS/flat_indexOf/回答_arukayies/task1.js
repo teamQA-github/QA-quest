@@ -3,7 +3,7 @@ function getTitleCol(title) {
     const titles = SHEET.getRange("1:1").getValues()
 
     // ２次元配列をフラットにする
-    const flatTitles = titles.flat();
+    const flatTitles = titles[0];
 
     // 指定文字の位置を返す
     return flatTitles.indexOf(title);
