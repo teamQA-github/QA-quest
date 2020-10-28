@@ -130,7 +130,7 @@ function getPassengerIdValue(num){
 
 function test(){
 
-  getPassengerIdValue(1、"PassengerId")
+  getPassengerIdValue(1, "PassengerId")
   // 1
   getPassengerIdValue(5, "Age")
   // 35
