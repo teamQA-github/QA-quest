@@ -45,7 +45,7 @@ https://datawokagaku.com/github_register/
     1. プルリクエストのコメント蘭に`@teamQA-github/mentor`にメンションをお願いします。
 1. Slackの[#qa-quest](https://teamqa-talk.slack.com/archives/C01CQKESUER)チャンネルにプルリクのURLを添付してレビュー依頼をお願いします。
 1. レビューをしたら、コメントをしSlackでご連絡するので確認/コメント対応を行ってください。
-1. 対応が必要なコメントがなくなったら、*Mergeはせずに*プルリクをクローズしてください。
+1. 対応が必要なコメントがなくなったら、**Mergeはせずに**プルリクをクローズしてください。
 
 # メモ
 - seleniumやAirtestなどの検証自動化関連も取り扱っても良いかも？？
