@@ -15,7 +15,7 @@
     - gitのプルリクでの依頼をする場合は[gitの対応方法](#gitの対応方法)を参照
     - git以外でレビュー依頼したい場合は、`＠hiroyuki.hanaue`にメンションをつけて [#qa-quest](https://teamqa-talk.slack.com/archives/C01CQKESUER)のチャンネルから依頼してください。  
     依頼時に作成したGASのURLなどを添付して共有してください。
-1. レビューをしたら、
+1. レビューをしたら、コメントをしSlackでご連絡するので確認/コメント対応を行ってください。
 
 # gitの対応方法
 基本的にはSlackまたは、もくもく会でフォローします！
@@ -44,6 +44,8 @@ https://datawokagaku.com/github_register/
     1. プルリクエストのタイトル(Pull Request名)は必ず課題名(フォルダ名)で依頼してください。
     1. プルリクエストのコメント蘭に`@teamQA-github/mentor`にメンションをお願いします。
 1. Slackの[#qa-quest](https://teamqa-talk.slack.com/archives/C01CQKESUER)チャンネルにプルリクのURLを添付してレビュー依頼をお願いします。
+1. レビューをしたら、コメントをしSlackでご連絡するので確認/コメント対応を行ってください。
+1. 対応が必要なコメントがなくなったら、*Mergeはせずに*プルリクをクローズしてください。
 
 # メモ
 - seleniumやAirtestなどの検証自動化関連も取り扱っても良いかも？？
