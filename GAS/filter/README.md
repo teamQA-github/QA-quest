@@ -2,17 +2,17 @@
 
 # summary
 
-テーブルデータを扱う際に重要なfillter()をご紹介します。  
+テーブルデータを扱う際に便利なfillter()をご紹介します。  
 テーブルデータで空白を除いた値を取得したい場合や、ある一定以上の値のみを抽出したデータを取得したい場合などに便利です！
 
 ### filter()
-filter()は引数で渡された条件（callback）で抽出された、新しい配列を作成します。
-条件（callback）は配列の要素を一つ一つに対して判定を行い、判定の結果がtrueとなった要素のみの配列を作成します。
+filter()は引数で渡された条件（callback関数）で抽出された、新しい配列を作成します。
+条件（callback関数）は配列の要素を一つ一つに対して判定を行い、判定の結果がtrueとなった要素のみの配列を作成します。
 
 ```
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-#条件（callback）
+#条件（callback関数）
 #引数のvalueには配列の要素が渡される。配列の要素数分この関数が呼び出される。
 function isBigEnough(value) {
   return value > 6
@@ -46,13 +46,12 @@ filter()を活用して①〜③の課題にチャレンジして見ましょう
 １つの課題のみでもレビューを依頼してOKです〜
 
 ▼ スプレッドシート  
-https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7l2o/edit?usp=sharing  
-シート「filte」
+https://docs.google.com/spreadsheets/d/1O1lwcuayrZnFJr0OYrWTiwKXQNaxzSY-avJrFW-C1Zw/edit#gid=0  
+シート「titanic」
 ※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
 ## 課題①
-表1行目のタイトル行に対して、引数で渡された文字列と一致する列番号を返す関数を実装してみましょう！  
-A列が0と返却されるように実装してください。
+Cabin欄(K列)には
 
 例)
 ```
