@@ -9,7 +9,7 @@
 filter()は引数で渡された条件（callback関数）で抽出された、新しい配列を作成します。  
 条件（callback関数）は配列の要素を一つ一つに対して判定を行い、判定の結果がtrueとなった要素のみの配列を作成します。
 
-```
+```js
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
 //条件（callback関数）
@@ -31,7 +31,7 @@ result2
 
 また、filter()は2次元配列にも利用可能です！ その場合は１つの要素が1行の配列であることに注意が必要です！！  
 ※3次元以上でも利用可能ですが、あまり3次元以上で利用されるケースは無いかと思います。
-```
+```js
 const words2 = [['spray', 'limit'], ['elite', 'exuberant'], ['destruction', 'present']];
 
 //１つ１つの要素であるvalueが配列である点と、戻り値が多次元配列である点に注意する。
@@ -54,7 +54,7 @@ Cabin欄(K列)には空白行が複数存在します。空白以外のCabinの�
 ※余裕があれば[flat()](https://github.com/teamQA-github/QA-quest/tree/main/GAS/flat_indexOf)も活用してみてください！
 
 例)
-```
+```js
 // filter.gs
 
 //更新対象のスプレッドシートのシート名
@@ -72,7 +72,7 @@ function getCabinList(){
 Sex欄(E列)からmale(男性)の人数を取得してください。
 
 例)
-```
+```js
 function getMaleNum(){
   //課題をコーディングする
   
@@ -85,7 +85,7 @@ function getMaleNum(){
 Survived欄が1(生存)かつ女性でのみのデータとなる2次元配列を新たに作成してください。
 
 例)
-```
+```js
 function getNewArry(){
   //課題をコーディングする
   
