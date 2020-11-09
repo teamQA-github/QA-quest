@@ -46,7 +46,7 @@ filter()を活用して①〜③の課題にチャレンジして見ましょう
 
 ▼ スプレッドシート  
 https://docs.google.com/spreadsheets/d/1O1lwcuayrZnFJr0OYrWTiwKXQNaxzSY-avJrFW-C1Zw/edit#gid=0  
-シート「titanic」
+シート「titanic」  
 ※上記のスプレッドシートは更新せずに、ご自身の Google Workspace に複製をしてください！
 
 ## 課題①
