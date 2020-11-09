@@ -10,7 +10,7 @@ GASでスプレッドシートを操作する上で、とても便利な`flat()`
 多次元配列を指定した次元数に再結合し、新しい配列を生成する関数です。
 >詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)を参照
 
-```
+```js
 //2次元の配列(getValuesで取得される形式)
 const arr1 = [[0, 1], [2, 3], [4, 5]]
 
@@ -33,7 +33,7 @@ console.log(arr2.flat(2));
 注意点としてindexOf()は多次元配列には使用ができず、必ず -1 が返されてしまいます。  
 >詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)を参照
 
-```
+```js
 const arr = ['OK', 'NG', 'OK', 'OK', 'NG'];
 
 console.log(arr.indexOf('NG'));
@@ -67,7 +67,7 @@ https://docs.google.com/spreadsheets/d/1YjXzwA34C2hjLxVVIqcgqzS4wUHzXLlMHsoM3Sn7
 A列が0と返却されるように実装してください。
 
 例)
-```
+```js
 // flat_indexOf.gs
 
 // 更新対象のスプレッドシートのシート名
@@ -96,7 +96,7 @@ A列が0と返却されるように実装してください。
 多次元配列では`indexOf()`が使用できないのでどうすれば良いか考えて見ましょう！
 
 例)
-```
+```js
 // flat_indexOf.gs
 
 function getPassengerIdRow(num){
@@ -121,7 +121,7 @@ function test(){
 タイトル行とPassengerIdが一致した行は離れていても、検索したタイトル行の列と返却する値の列は同じです。
 
 例)
-```
+```js
 // flat_indexOf.gs
 
 function getPassengerIdValue(num){
