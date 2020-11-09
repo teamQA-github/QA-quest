@@ -50,7 +50,7 @@ https://docs.google.com/spreadsheets/d/1tH6X-KWD28_bdlAsFkQd1iqVcgpEHWU8omk0fjP6
 
 ▼ コード
 
-```
+```js
 // update-table.gs
 
 // 更新対象のスプレッドシートのシート名
@@ -68,7 +68,7 @@ function test(){
 ```
 
 ### ヒント
-```
+```js
 let up_data = {"ID": 1, "ステータス": "対応中"};
 for(let key in up_data){
   Logger.log(`key:${key}、value:${up_data[key]}`)
