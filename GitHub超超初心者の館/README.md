@@ -46,7 +46,7 @@ GitHubのアカウント作成から引き続きで行っている場合は問�
 GASのスクリプトエディタ画面にて簡単にGitHubでソースコードのバージョン管理が可能なChromeの拡張機能   
 【画像を挿入する】
 
-1. Google Apps Script GitHub アシスタントをChromeに追加する
+1. Google Apps Script GitHub アシスタントをChromeに追加する  
     https://chrome.google.com/webstore/detail/google-apps-script-github/lfjcgcmkmjjlieihflfhjopckgpelofo
 1. 連携したいGASのスクリプトエディタを開く
 1. `Login SCM`ボタンを押下する
