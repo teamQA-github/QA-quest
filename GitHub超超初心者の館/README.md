@@ -1,5 +1,5 @@
 # GitHub超超初心者の館
-<img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHub.png" width="500">
+<img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHub.jpg" width="500">
 
 ## Summary
 GitHubなにそれおいしいの？って人でもGitHubを超超簡単に利用できるようになるための超超初心者の館です！  
