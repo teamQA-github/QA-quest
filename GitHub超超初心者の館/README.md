@@ -1,6 +1,5 @@
 # GitHub超超初心者の館
-※GASのQA-questに挑戦される方を対象とした内容となっています。  
-<img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHub.png" width="400">
+<img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHub.png" width="500">
 
 ## Summary
 GitHubなにそれおいしいの？って人でも超超簡単に利用できるようになるための超超初心者の館です！  
@@ -9,6 +8,7 @@ push,pull,merge,fetch,clone,fork,get,diff,,,呪文のようなコマンドや難
 
 なにこれ便利！！！！ってなったら、みんなも呪文(コマンド)を覚えて冒険(開発)に出発しよう！！！！  
 QA-questは安全地帯なのでどんな失敗しても怒られる心配はないです！！なので、安心してチャレンジ(失敗)しましょうww
+※GASのQA-questに挑戦される方を対象とした内容となっています。
 
 ## GitHubのアカウント作成
 すでにGitHubアカウントを所持している人は飛ばして下さい！
