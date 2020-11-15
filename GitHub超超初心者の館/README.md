@@ -2,8 +2,8 @@
 <img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHub.png" width="500">
 
 ## Summary
-GitHubなにそれおいしいの？って人でも超超簡単に利用できるようになるための超超初心者の館です！  
-push,pull,merge,fetch,clone,fork,get,diff,,,呪文のようなコマンドや難しい話はとりあえず置いておいて、、、  
+GitHubなにそれおいしいの？って人でもGitHubを超超簡単に利用できるようになるための超超初心者の館です！  
+push,pull,merge,fetch,clone,fork,get,diff、、、呪文のようなコマンドや難しい話はとりあえず置いておいて、、、  
 とりあえず使ってみよう！！がコンセプトです！！！
 
 なにこれ便利！！！！ってなったら、みんなも呪文(コマンド)を覚えて冒険(開発)に出発しよう！！！！  
