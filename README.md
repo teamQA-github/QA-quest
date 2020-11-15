@@ -16,7 +16,7 @@
     - ~~git以外でレビュー依頼したい場合は、`＠hiroyuki.hanaue`にメンションをつけて [#qa-quest](https://teamqa-talk.slack.com/archives/C01CQKESUER)のチャンネルから依頼してください。  
     依頼時に作成したGASのURLなどを添付して共有してください。  
     スプレッドシートに`20731057hh@gmail.com`のメールアドレスをご共有お願いします！~~  
-        - [GitHub超超初心者の館](https://github.com/teamQA-github/QA-quest/tree/main/GitHub超超初心者の館)を作成したので、Gitが分からない方もGitからのプルリクをチャレンジしてみて下さい!!
+        - [GitHub超超初心者の館](https://github.com/teamQA-github/QA-quest/tree/main/GitHub超超初心者の館)を作成したので、gitが分からない方もgitからのプルリクにチャレンジしてみて下さい!!
 1. レビューをしたら、コメントをしSlackでご連絡するので確認/コメント対応を行ってください。
 
 # gitの対応方法
