@@ -18,7 +18,7 @@ QA-questは安全地帯なのでどんな失敗しても怒られる心配はな
 1. GitHubに登録するボタンを押下する  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/GitHubHP.png" width="400">
 1. アカウント情報を記載し、 `Create account`ボタンを押下する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/account-create.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/account-create.png" width="200">
     * UsernameはアカウントのURLやログインIDEAに利用されます
 1. `Next: select a plan` をクリックするとPlanを選ぶ画面に行きますが、この時点でGithubからメールがきていると思うので、  
     メールアドレスをVerifyしましょう！！（Planは選ばなくていいです。）  
@@ -66,13 +66,13 @@ GASのスクリプトエディタ画面にて簡単にGitHubでソースコー�
 1. 画面左上のリポジトリのプルダウンをクリックする。(初期表示ではmainと表示されているはず)  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/repo-main.png" width="400">
 1. 表示されたモーダル内にあるテキストボックスに作成したいブランチ名を入力する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/make-branch.png" width="400">  
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/make-branch.png" width="200">  
     ブランチ名は任意ですが、推奨は課題名と同じ名前がわかりやすいかと！
     例:filter  
 1. ブランチ名を入力すると`Create branch: [ブランチ名]`と表示されるのでクリックする  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/create-branch-filter.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/create-branch-filter.png" width="200">
 1. リポジトリのプルダウンに作成したリポジトリ名で表示されていれば成功  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/filter-branch.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/filter-branch.png" width="150">
 
 ### 対応した課題をpushする
 1. 課題の対応を行うスクリプトエディタを開く
@@ -86,13 +86,13 @@ GASのスクリプトエディタ画面にて簡単にGitHubでソースコー�
 1. ある程度コーディングができたらPushするために↑ボタンを押下してみよう！  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/edita-push.png" width="400"> 
 1. 更新差分を確認し、問題がなければコメントを記載してPushボタンを押下する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/diff-Push.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/diff-Push.png" width="300">
     * コメントは更新内容を簡潔に記載するのが望ましいが、ここでは簡単な記載でOKです！
 1. 何かしらコーディングを行い、前にPushした状態に戻したいときはPullをするために↓ボタンを押下してみよう！  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/edita-pull.png" width="400">
 1. 更新差分を確認し、問題がなければコメントを記載してPullボタンを押下する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/diff-Pull.png" width="400">
-    画面が再描画されて前回Pushしたソースコードに戻っていれば成功！
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/diff-Pull.png" width="300">
+    * 画面が再描画されて前回Pushしたソースコードに戻っていれば成功！
 
 ### 課題をプルリクしてレビュー依頼する
 1つでも課題が完成してPushまで行えていれば、プルリクを作成してレビュー依頼をしてみましょう！
@@ -102,9 +102,9 @@ GASのスクリプトエディタ画面にて簡単にGitHubでソースコー�
 1. Pull requestsのタブを開き、`New pull request`ボタンを押下する  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/Pull-requests-new.png" width="400">
 1. リクエスト先(左側)を`teamQA-github/QA-quest`の`main`を指定する
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/pull-request-to.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/pull-request-to.png" width="500">
 1. リクエスト元(右側)を`[Forkしたリポジトリ]`の`[課題用のブランチ]`を指定する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/pull-request-from.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/pull-request-from.png" width="500">
 1. `Create Pull request`ボタンを押下する
 1. プルリクのタイトルとコメント欄に入力を行し、`Create Pull request`ボタンを押下する  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/pull-request-comment.png" width="400">   
