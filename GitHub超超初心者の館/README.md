@@ -52,7 +52,7 @@ GASのスクリプトエディタ画面にて簡単にGitHubでソースコー�
 1. 連携したいGASのスクリプトエディタを開く
 1. `Login SCM`ボタンを押下する
 1. GitHubの`username` `password`を入力しGitHubと連携する  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/loginSCM.png" width="400">
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/loginSCM.png" width="200">
     * メールアドレスではなく、usernameの点に注意
     * `token`は未記入で問題なし
 1. `Repository`を押下しForkしたQA-questを選択できれば設定は完了
