@@ -4,9 +4,9 @@
 # 目次
 - [Summary](#Summary)
     - [GitHubのアカウント作成](#githubのアカウント作成)
-    - [QA-questをForkする](#qa-questをForkする)
-    - [Google Apps Script GitHub アシスタントの導入](#googleappsscriptgithubアシスタントの導入)
-    - [QA-questにチャレンジしよう！](#QA-questにチャレンジしよう！)
+    - [QA-questをForkする](#qa-questをforkする)
+    - [Google Apps Script GitHubアシスタントの導入](#google-apps-script-githubアシスタントの導入)
+    - [QA-questにチャレンジしよう！](#qa-questにチャレンジしよう)
         - [課題用のブランチを作成する](#課題用のブランチを作成する)
         - [対応した課題をpushする](#対応した課題をpushする)
         - [課題をプルリクしてレビュー依頼する](#課題をプルリクしてレビュー依頼する)
@@ -55,7 +55,7 @@ GitHubのアカウント作成から引き続きで行っている場合は問�
 1. リポジトリの複製が完了し、自身のアカウントIDにQA-questが作成されていれば成功  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/Fork-end.png" width="400">
     
-## Google Apps Script GitHub アシスタントの導入
+## Google Apps Script GitHubアシスタントの導入
 GASのスクリプトエディタ画面にて簡単にGitHubでソースコードのバージョン管理が可能なChromeの拡張機能   
 <img src="https://github.com/teamQA-github/QA-quest/blob/images/GAS-github.png" width="400">
 
