@@ -3,9 +3,9 @@
 
 # 目次
 - [Summary](#Summary)
-    - [GitHubのアカウント作成](#GitHubのアカウント作成)
-    - [QA-questをForkする](#QA-questをForkする)
-    - [Google Apps Script GitHub アシスタントの導入](#Google Apps Script GitHub アシスタントの導入)
+    - [GitHubのアカウント作成](#githubのアカウント作成)
+    - [QA-questをForkする](#qa-questをForkする)
+    - [Google Apps Script GitHub アシスタントの導入](#googleappsscriptgithubアシスタントの導入)
     - [QA-questにチャレンジしよう！](#QA-questにチャレンジしよう！)
         - [課題用のブランチを作成する](#課題用のブランチを作成する)
         - [対応した課題をpushする](#対応した課題をpushする)
