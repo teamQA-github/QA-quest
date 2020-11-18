@@ -61,13 +61,13 @@ GitHubのアカウント作成から引き続きで行っている場合は問�
 
 1. GitHubのアカウント設定画面から「Personal access token」を開く  
     [画面右上のアイコン]-[Settings]-[Developer settings]-[Personal access token]  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/Personal-access-tokens.png" width="400">   
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/Personal-access-tokens.png" width="400">
 1. 「Generate new token」のボタンを押下する  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/Genarate-new-token.png" width="400">
 1. Noteには任意の名前を設定し、Select scopesにgistまでのチェックを全てONにする  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/New-personal-access-token.png” width="400”>
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/New-personal-access-token.png" width="400">
 1. 「Generate token」を押下後に、`token`が表示されているので取得しておく  
-    <img src="https://github.com/teamQA-github/QA-quest/blob/images/get-token.png” width="400”>
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/get-token.png" width="400">  
     - ここから表示を切り替えるとtokenは表示されなくなってしまうので注意!!
 
 ## Google Apps Script GitHubアシスタントの導入
