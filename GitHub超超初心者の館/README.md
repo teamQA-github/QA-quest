@@ -5,6 +5,7 @@
 - [Summary](#Summary)
     - [GitHubのアカウント作成](#githubのアカウント作成)
     - [QA-questをForkする](#qa-questをforkする)
+    - [GitHubのトークンを取得する](#githubのトークンを取得する)
     - [Google Apps Script GitHubアシスタントの導入](#google-apps-script-githubアシスタントの導入)
     - [QA-questにチャレンジしよう！](#qa-questにチャレンジしよう)
         - [課題用のブランチを作成する](#課題用のブランチを作成する)
