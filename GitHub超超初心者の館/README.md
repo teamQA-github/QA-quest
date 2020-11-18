@@ -55,6 +55,20 @@ GitHubのアカウント作成から引き続きで行っている場合は問�
 1. リポジトリの複製が完了し、自身のアカウントIDにQA-questが作成されていれば成功  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/Fork-end.png" width="400">
     
+## GitHubのトークンを取得する
+この後設定する「Google Apps Script GitHubアシスタント」のログインで必要な`token`を取得する
+
+1. GitHubのアカウント設定画面から「Personal access token」を開く  
+    [画面右上のアイコン]-[Settings]-[Developer settings]-[Personal access token]  
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/Personal-access-tokens.png" width="400">   
+1. 「Generate new token」のボタンを押下する  
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/Genarate-new-token.png" width="400">
+1. Noteには任意の名前を設定し、Select scopesにgistまでのチェックを全てONにする  
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/New-personal-access-token.png” width="400”>
+1. 「Generate token」を押下後に、`token`が表示されているので取得しておく  
+    <img src="https://github.com/teamQA-github/QA-quest/blob/images/get-token.png” width="400”>
+    - ここから表示を切り替えるとtokenは表示されなくなってしまうので注意!!
+
 ## Google Apps Script GitHubアシスタントの導入
 GASのスクリプトエディタ画面にて簡単にGitHubでソースコードのバージョン管理が可能なChromeの拡張機能   
 <img src="https://github.com/teamQA-github/QA-quest/blob/images/GAS-github.png" width="400">
@@ -63,10 +77,10 @@ GASのスクリプトエディタ画面にて簡単にGitHubでソースコー�
     https://chrome.google.com/webstore/detail/google-apps-script-github/lfjcgcmkmjjlieihflfhjopckgpelofo
 1. 連携したいGASのスクリプトエディタを開く
 1. `Login SCM`ボタンを押下する
-1. GitHubの`username` `password`を入力しGitHubと連携する  
+1. GitHubの`username` `token`を入力しGitHubと連携する  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/loginSCM.png" width="200">
     * メールアドレスではなく、usernameの点に注意
-    * `token`は未記入で問題なし
+    * `password`は未記入で問題なし
 1. `Repository`を押下しForkしたQA-questを選択できれば設定は完了  
     <img src="https://github.com/teamQA-github/QA-quest/blob/images/repository.png" width="400">
     
