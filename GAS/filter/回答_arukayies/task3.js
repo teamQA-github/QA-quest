@@ -2,14 +2,11 @@ function getNewArry(){
     // シートのデータを取得する
     const passenger_list = SHEET.getDataRange().getValues();
     
-    // ① 生存した乗客を抜き出す
-    const result1 = passenger_list.filter(value => value[1] == 1);
-    
-    // ② ①から女性を抜き出す
-    const result2 = result1.filter(value => value[4] == "female");
+    // 生存した乗客を抜き出す && 女性を抜き出す
+    const result = passenger_list.filter(value => value[1] == 1 && value[4] == "female");
     
     // 結果
-    console.log(result2);
+    console.log(result);
     
 }
 
