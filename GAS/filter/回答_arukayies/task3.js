@@ -1,4 +1,20 @@
 function getNewArry(){
+    // シートのデータを取得する
+    const passenger_list = SHEET.getDataRange().getValues();
+    
+    // ① 生存した乗客を抜き出す
+    const result1 = passenger_list.filter(value => value[1] == 1);
+    
+    // ② ①から女性を抜き出す
+    const result2 = result1.filter(value => value[4] == "female");
+    
+    // 結果
+    console.log(result2);
+    
+}
+
+// GASのフィルター機能を使ったパターン
+function getNewArryByGASFilter(){
     // データ全体にフィルタをかける
     SHEET.getRange(1,1,SHEET.getLastRow(),SHEET.getLastColumn()).createFilter();
     
