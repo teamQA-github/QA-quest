@@ -3,6 +3,7 @@
 // 更新対象のスプレッドシートのシート名
 const SHEET_NAME = "titanic"
 
+//課題①
 function getTitleCol(title){
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName(SHEET_NAME);
@@ -11,11 +12,16 @@ function getTitleCol(title){
   //より細かく指定する方法：getRange(開始行, 開始列, 何行選択するか, 何列選択するか) https://qiita.com/sakaimo/items/ba5594208c254fa528dc
   
   console.log(values);
-  const titlelist = values.flat();
-  console.log(titlelist.indexOf(title));
+  const titleList = values.flat();
+  console.log(titleList.indexOf(title));
 }
 
-function setTitle(){
-  let title = "PassengerId"
-  getTitleCol(title);
+function test(){
+  
+  getTitleCol("PassengerId")
+  // 0
+  getTitleCol("Age")
+  // 5
+  getTitleCol("notitle")
+  // -1
 }
