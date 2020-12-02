@@ -79,11 +79,11 @@ function getTitleCol(title){
 
 function test(){
 
-  getTitleCol("PassengerId")
+  console.log(getTitleCol("PassengerId")
   // 0
-  getTitleCol("Age")
+  console.log(getTitleCol("Age")
   // 5
-  getTitleCol("notitle")
+  console.log(getTitleCol("notitle")
   // -1
 }
 ```
@@ -105,11 +105,11 @@ function getPassengerIdRow(num){
 
 function test(){
 
-  getPassengerIdRow(1)
+  console.log(getPassengerIdRow(1)
   // 1
-  getPassengerIdRow(5)
+  console.log(getPassengerIdRow(5)
   // 5
-  getPassengerIdRow(0)
+  console.log(getPassengerIdRow(0)
   // -1
 }
 ```
@@ -130,11 +130,11 @@ function getPassengerIdValue(num){
 
 function test(){
 
-  getPassengerIdValue(1, "PassengerId")
+  console.log(getPassengerIdValue(1, "PassengerId")
   // 1
-  getPassengerIdValue(5, "Age")
+  console.log(getPassengerIdValue(5, "Age")
   // 35
-  getPassengerIdValue(890, "Cabin")
+  console.log(getPassengerIdValue(890, "Cabin")
   // C148
 }
 ```
