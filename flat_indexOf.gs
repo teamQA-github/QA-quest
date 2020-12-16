@@ -12,16 +12,16 @@ function getTitleCol(title){
   //より細かく指定する方法：getRange(開始行, 開始列, 何行選択するか, 何列選択するか) https://qiita.com/sakaimo/items/ba5594208c254fa528dc
   
   console.log(values);
-  const titleList = values.flat();
-  console.log(titleList.indexOf(title));
+  let getTitle = values.flat().indexOf(title);
+  return getTitle;
 }
 
 function test(){
   
-  getTitleCol("PassengerId")
+  console.log(getTitleCol("PassengerId"));
   // 0
-  getTitleCol("Age")
+  console.log(getTitleCol("Age"));
   // 5
-  getTitleCol("notitle")
+  console.log(getTitleCol("notitle"));
   // -1
 }
