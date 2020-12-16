@@ -9,20 +9,20 @@ function getPassengerIdRow(num){
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName(SHEET_NAME);
   const lastRow = sheet.getLastRow();
-  const numbers = sheet.getRange(1,1,lastRow1,1).getValues();
+  const numbers = sheet.getRange("A:A").getValues();
   
   //console.log(numbers.flat());
-  console.log(numbers.flat().indexOf(num));
-
+  let passengerIdRow = numbers.flat().indexOf(num);
+  return passengerIdRow;
 }
 
 function test2(num){
 
-  getPassengerIdRow(1)
+  console.log(getPassengerIdRow(1));
   // 1
-  getPassengerIdRow(5)
+  console.log(getPassengerIdRow(5));
   // 5
-  getPassengerIdRow(0)
+  console.log(getPassengerIdRow(0));
   // -1
 }
 
