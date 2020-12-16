@@ -20,10 +20,10 @@ console.log(arr1.flat())
 //多次元の配列(3次元)
 const arr2 = [0, 1, [2, 3, [4, 5]]]
 
-console.log(arr2.flat());
+console.log(arr2.flat())
 // [0, 1, 2, 3, [4, 5]]
 
-console.log(arr2.flat(2));
+console.log(arr2.flat(2))
 // [0, 1, 2, 3, 4, 5]
 ```
 
@@ -34,15 +34,15 @@ console.log(arr2.flat(2));
 >詳細は[こちら](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)を参照
 
 ```js
-const arr = ['OK', 'NG', 'OK', 'OK', 'NG'];
+const arr = ['OK', 'NG', 'OK', 'OK', 'NG']
 
-console.log(arr.indexOf('NG'));
+console.log(arr.indexOf('NG'))
 // 1
 
-console.log(arr.indexOf('YES'));
+console.log(arr.indexOf('YES'))
 // -1
 
-console.log(arr.indexOf('NG', 2));
+console.log(arr.indexOf('NG', 2))
 // 4
 ```
 
@@ -79,11 +79,11 @@ function getTitleCol(title){
 
 function test(){
 
-  console.log(getTitleCol("PassengerId")
+  console.log(getTitleCol("PassengerId"))
   // 0
-  console.log(getTitleCol("Age")
+  console.log(getTitleCol("Age"))
   // 5
-  console.log(getTitleCol("notitle")
+  console.log(getTitleCol("notitle"))
   // -1
 }
 ```
@@ -105,11 +105,11 @@ function getPassengerIdRow(num){
 
 function test(){
 
-  console.log(getPassengerIdRow(1)
+  console.log(getPassengerIdRow(1))
   // 1
-  console.log(getPassengerIdRow(5)
+  console.log(getPassengerIdRow(5))
   // 5
-  console.log(getPassengerIdRow(0)
+  console.log(getPassengerIdRow(0))
   // -1
 }
 ```
@@ -130,11 +130,11 @@ function getPassengerIdValue(num){
 
 function test(){
 
-  console.log(getPassengerIdValue(1, "PassengerId")
+  console.log(getPassengerIdValue(1, "PassengerId"))
   // 1
-  console.log(getPassengerIdValue(5, "Age")
+  console.log(getPassengerIdValue(5, "Age"))
   // 35
-  console.log(getPassengerIdValue(890, "Cabin")
+  console.log(getPassengerIdValue(890, "Cabin"))
   // C148
 }
 ```
